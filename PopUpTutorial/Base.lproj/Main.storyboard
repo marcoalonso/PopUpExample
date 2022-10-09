@@ -84,6 +84,20 @@
                                     <constraint firstAttribute="trailing" secondItem="MEC-vY-BA0" secondAttribute="trailing" id="tWd-xv-9Gh"/>
                                     <constraint firstAttribute="height" constant="200" id="zTR-hm-AfA"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="4" height="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -108,6 +122,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="zfJ-Y8-xn5" id="m1P-6M-feA"/>
                         <outlet property="centerPopUpWindowConstraint" destination="0k5-5e-IAx" id="mRe-H2-his"/>
                         <outlet property="popUpView" destination="Dtd-3x-xcO" id="DEa-z3-dWe"/>
                     </connections>
@@ -115,6 +130,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96.92307692307692" y="-28.436018957345969"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="2ZP-r7-eFb">
+            <objects>
+                <viewController id="tnS-xk-10X" customClass="TutorialViewController" customModule="PopUpTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCN-fD-NAd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56Z-zW-WG0">
+                                <rect key="frame" x="20" y="319" width="353" height="299"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqe-h2-2rN">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="299"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6No-pG-ulv">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="299"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather tutoria" translatesAutoresizingMaskIntoConstraints="NO" id="YSu-vu-6jC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="249"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38p-e5-mmZ">
+                                                        <rect key="frame" x="0.0" y="249" width="353" height="50"/>
+                                                        <color key="backgroundColor" red="0.1843137443" green="0.18039217590000001" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="KQb-cf-kdP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="CONTINUAR"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6No-pG-ulv" firstAttribute="top" secondItem="zqe-h2-2rN" secondAttribute="top" id="0BJ-Tg-f5h"/>
+                                            <constraint firstAttribute="bottom" secondItem="6No-pG-ulv" secondAttribute="bottom" id="A2O-ML-FjK"/>
+                                            <constraint firstItem="6No-pG-ulv" firstAttribute="leading" secondItem="zqe-h2-2rN" secondAttribute="leading" id="NLX-lR-WeZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6No-pG-ulv" secondAttribute="trailing" id="Qj4-JI-FLn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zqe-h2-2rN" firstAttribute="leading" secondItem="56Z-zW-WG0" secondAttribute="leading" id="JJr-N5-JK5"/>
+                                    <constraint firstAttribute="trailing" secondItem="zqe-h2-2rN" secondAttribute="trailing" id="PoQ-Pr-kHq"/>
+                                    <constraint firstAttribute="bottom" secondItem="zqe-h2-2rN" secondAttribute="bottom" id="Qek-Tg-zBK"/>
+                                    <constraint firstItem="zqe-h2-2rN" firstAttribute="top" secondItem="56Z-zW-WG0" secondAttribute="top" id="hxC-Fn-4oZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yxH-Tn-a02"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="56Z-zW-WG0" secondAttribute="trailing" constant="20" id="89z-Au-3Y3"/>
+                            <constraint firstItem="yxH-Tn-a02" firstAttribute="bottom" secondItem="56Z-zW-WG0" secondAttribute="bottom" constant="200" id="Fg6-OM-YBh"/>
+                            <constraint firstItem="56Z-zW-WG0" firstAttribute="top" secondItem="yxH-Tn-a02" secondAttribute="top" constant="260" id="vAV-xQ-BRz"/>
+                            <constraint firstItem="56Z-zW-WG0" firstAttribute="leading" secondItem="yxH-Tn-a02" secondAttribute="leading" constant="20" id="zst-lm-AWE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="borderView" destination="56Z-zW-WG0" id="06f-3f-eri"/>
+                        <outlet property="tutorialView" destination="zqe-h2-2rN" id="prd-C6-VBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYW-IK-dBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="-29"/>
         </scene>
     </scenes>
     <resources>

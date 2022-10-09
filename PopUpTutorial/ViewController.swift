@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var popUpView: UIView!
     var isShowinTutorial: Bool = false
     
@@ -16,10 +17,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        popUpView.layer.cornerRadius = 10
-        popUpView.layer.masksToBounds = true
+        popUpView.aplicarSombraImagen(containerView: backgroundImage, cornerRadious: 12)
         centerPopUpWindowConstraint.constant = -800
-        popUpView.alpha = 0
+        
+        
+        //Style shadow
+        popUpView.layer.shadowColor = UIColor.black.cgColor
+        popUpView.layer.shadowOpacity = 1
+        popUpView.layer.shadowOffset = .zero
+        popUpView.layer.shadowRadius = 20
     }
     
     private func simpleAnimate(with duration: Double){
@@ -34,18 +40,19 @@ class ViewController: UIViewController {
         isShowinTutorial = !isShowinTutorial
         if isShowinTutorial {
             centerPopUpWindowConstraint.constant = 0
-            popUpView.alpha = 0.9
             
             //Animation
 //            simpleAnimate(with: 0.4)
             UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseIn) {
                 self.view.layoutIfNeeded()
+                
+                self.backgroundImage.layer.opacity = 0.65
             }
             
             
         } else {
             centerPopUpWindowConstraint.constant = -800
-            
+            backgroundImage.layer.opacity = 1
             //Animation
 //            simpleAnimate(with: 0.2)
             
@@ -58,3 +65,16 @@ class ViewController: UIViewController {
     
 }
 
+extension UIView {
+    func aplicarSombraImagen(containerView : UIView, cornerRadious : CGFloat){
+        containerView.clipsToBounds = false
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOpacity = 1
+        containerView.layer.shadowOffset = CGSize.zero
+        containerView.layer.shadowRadius = 10
+        containerView.layer.cornerRadius = cornerRadious
+        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadious).cgPath
+        self.clipsToBounds = true
+        self.layer.cornerRadius = cornerRadious
+    }
+}

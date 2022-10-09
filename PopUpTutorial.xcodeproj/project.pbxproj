@@ -13,6 +13,8 @@
 		60085CEB28F251C000FAECB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60085CE928F251C000FAECB1 /* Main.storyboard */; };
 		60085CED28F251C200FAECB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60085CEC28F251C200FAECB1 /* Assets.xcassets */; };
 		60085CF028F251C200FAECB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60085CEE28F251C200FAECB1 /* LaunchScreen.storyboard */; };
+		607D17C428F260E6003AA1B9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607D17C328F260E6003AA1B9 /* TutorialViewController.swift */; };
+		607D17C628F26137003AA1B9 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607D17C528F26137003AA1B9 /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		60085CEC28F251C200FAECB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60085CEF28F251C200FAECB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60085CF128F251C200FAECB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607D17C328F260E6003AA1B9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		607D17C528F26137003AA1B9 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				60085CEC28F251C200FAECB1 /* Assets.xcassets */,
 				60085CEE28F251C200FAECB1 /* LaunchScreen.storyboard */,
 				60085CF128F251C200FAECB1 /* Info.plist */,
+				607D17C328F260E6003AA1B9 /* TutorialViewController.swift */,
+				607D17C528F26137003AA1B9 /* Extension+UIView.swift */,
 			);
 			path = PopUpTutorial;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				60085CE828F251C000FAECB1 /* ViewController.swift in Sources */,
 				60085CE428F251C000FAECB1 /* AppDelegate.swift in Sources */,
+				607D17C628F26137003AA1B9 /* Extension+UIView.swift in Sources */,
+				607D17C428F260E6003AA1B9 /* TutorialViewController.swift in Sources */,
 				60085CE628F251C000FAECB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopUpTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="zfJ-Y8-xn5">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clima App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n53-Qh-FfP">
-                                <rect key="frame" x="20" y="57" width="350" height="100"/>
+                                <rect key="frame" x="20" y="69" width="353" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="x8C-yq-34J"/>
                                 </constraints>
@@ -29,16 +29,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-sW-Sq0">
-                                <rect key="frame" x="330" y="750" width="50" height="50"/>
+                                <rect key="frame" x="333" y="758" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aQd-MP-zhK"/>
                                     <constraint firstAttribute="width" constant="50" id="n24-4k-9Xa"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" " backgroundImage="tutorial"/>
+                                <connections>
+                                    <action selector="showTutorialButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Nd-ei-PcH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 ° C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-Bx-TZI">
-                                <rect key="frame" x="20" y="207" width="350" height="100"/>
+                                <rect key="frame" x="20" y="219" width="353" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Y9e-LJ-N9D"/>
                                     <constraint firstAttribute="height" constant="100" id="gWD-rl-goU"/>
@@ -48,16 +51,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtd-3x-xcO">
-                                <rect key="frame" x="20" y="322" width="350" height="200"/>
+                                <rect key="frame" x="20" y="326" width="353" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MEC-vY-BA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather tutoria" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-qj-IaS">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="150"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjY-Bq-KIw">
-                                                <rect key="frame" x="0.0" y="150" width="350" height="50"/>
+                                                <rect key="frame" x="0.0" y="150" width="353" height="50"/>
                                                 <color key="backgroundColor" red="0.1843137443" green="0.18039217590000001" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2vL-Yr-jUI"/>
@@ -66,11 +69,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="CONTINUAR"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="25"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showTutorialButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAu-rV-feN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -106,6 +107,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gyD-sW-Sq0" secondAttribute="bottom" constant="10" id="tyO-3i-7O1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerPopUpWindowConstraint" destination="0k5-5e-IAx" id="mRe-H2-his"/>
+                        <outlet property="popUpView" destination="Dtd-3x-xcO" id="DEa-z3-dWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

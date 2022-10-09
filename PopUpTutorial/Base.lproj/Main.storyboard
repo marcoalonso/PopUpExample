@@ -47,11 +47,50 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtd-3x-xcO">
+                                <rect key="frame" x="20" y="322" width="350" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MEC-vY-BA0">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather tutoria" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-qj-IaS">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjY-Bq-KIw">
+                                                <rect key="frame" x="0.0" y="150" width="350" height="50"/>
+                                                <color key="backgroundColor" red="0.1843137443" green="0.18039217590000001" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2vL-Yr-jUI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="CONTINUAR"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MEC-vY-BA0" secondAttribute="bottom" id="UHo-yR-GE8"/>
+                                    <constraint firstItem="MEC-vY-BA0" firstAttribute="leading" secondItem="Dtd-3x-xcO" secondAttribute="leading" id="aTK-B9-CFb"/>
+                                    <constraint firstItem="MEC-vY-BA0" firstAttribute="top" secondItem="Dtd-3x-xcO" secondAttribute="top" id="pBc-aB-ZiA"/>
+                                    <constraint firstAttribute="trailing" secondItem="MEC-vY-BA0" secondAttribute="trailing" id="tWd-xv-9Gh"/>
+                                    <constraint firstAttribute="height" constant="200" id="zTR-hm-AfA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="n53-Qh-FfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0CA-Ak-epL"/>
+                            <constraint firstItem="Dtd-3x-xcO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0k5-5e-IAx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dtd-3x-xcO" secondAttribute="trailing" constant="20" id="9DC-I1-nKg"/>
                             <constraint firstItem="n53-Qh-FfP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9is-ca-tc6"/>
                             <constraint firstItem="5FE-Bx-TZI" firstAttribute="top" secondItem="n53-Qh-FfP" secondAttribute="bottom" constant="50" id="BLE-9Y-daO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5FE-Bx-TZI" secondAttribute="trailing" constant="20" id="Fof-ZP-hid"/>
@@ -60,8 +99,10 @@
                             <constraint firstItem="5FE-Bx-TZI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J1Z-3H-sfz"/>
                             <constraint firstItem="zfJ-Y8-xn5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LwN-0K-Vpq"/>
                             <constraint firstItem="zfJ-Y8-xn5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OjU-fm-SMb"/>
+                            <constraint firstItem="Dtd-3x-xcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a1M-DO-Tu5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gyD-sW-Sq0" secondAttribute="trailing" constant="10" id="dBd-Pp-yFF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n53-Qh-FfP" secondAttribute="trailing" constant="20" id="feS-Ot-c1e"/>
+                            <constraint firstItem="Dtd-3x-xcO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p4d-So-P7d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gyD-sW-Sq0" secondAttribute="bottom" constant="10" id="tyO-3i-7O1"/>
                         </constraints>
                     </view>
@@ -74,6 +115,7 @@
     <resources>
         <image name="sky" width="5472" height="3648"/>
         <image name="tutorial" width="512" height="512"/>
+        <image name="weather tutoria" width="1144" height="579"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
